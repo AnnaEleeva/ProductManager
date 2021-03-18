@@ -6,7 +6,12 @@
 <title>Product Manager</title>
 </head>
 <body>
-
+<div align="right">
+    <h3 th:inline="text">Welcome [[${#httpServletRequest.remoteUser}]]</h3>
+    <form th:action="@{/logout}" method="post">
+        <input type="submit" value="Logout" />
+    </form>
+</div>
 <div align="center">
     <h1>Product List</h1>
         <a href="/new">Create New Product</a>
