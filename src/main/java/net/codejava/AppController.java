@@ -42,12 +42,23 @@ public class AppController {
 	
 	@RequestMapping("/edit/{id}")
 	public ModelAndView showEditProductPage(@PathVariable(name = "id") int id) {
-		ModelAndView mav = new ModelAndView("edit_product");
+		ModelAndView mav = new ModelAndView("edit_product");//ModelAndView ( Вид, Указатель, Держатель );
 		Product product = service.get(id);
-		mav.addObject("product", product);
+		mav.addObject("product", product); //Указатель, Держатель
 		
 		return mav;
 	}
+	@RequestMapping("/play/{id}")
+	public ModelAndView showPlayProductPage(@PathVariable(name = "id") int id) {
+		ModelAndView mav = new ModelAndView("playView");
+		Product product = service.get(id);
+		mav.addObject("product", product);
+		//mav.addObject("id",id);
+
+		return mav;
+		//return "playView";
+	}
+
 	
 	@RequestMapping("/delete/{id}")
 	public String deleteProduct(@PathVariable(name = "id") int id) {

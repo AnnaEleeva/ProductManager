@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <title>Hello!</title>
+</head>
+<body>
+<div align="center">
+    <h1>Hello!</h1>
+    <br />
+    <form  th:object="${product}">
+
+        <table border="1" cellpadding="10">
+            <tr>
+                <td>Product ID:</td>
+                <td>
+                    <input type="text" th:field="*{id}" readonly="readonly" />
+                </td>
+            </tr>
+
+        </table>
+    </form>
+</div>
+</body>
+</html>
