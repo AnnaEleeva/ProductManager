@@ -4,6 +4,8 @@ import java.util.List;
 
 import net.codejava.product.Product;
 import net.codejava.product.ProductService;
+import net.codejava.subjects.Subjects;
+import net.codejava.subjects.SubjectsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,6 +20,9 @@ public class AppController {
 
 	@Autowired
 	private ProductService service;
+
+	@Autowired
+	private SubjectsService subjectsService;
 	
 	@RequestMapping("/")
 	public String viewHomePage(Model model) { //вывод таблицы
@@ -26,6 +31,14 @@ public class AppController {
 		
 		return "index";
 	}
+
+	/*@RequestMapping("/")
+	public String viewHomePage(Model model) { //вывод таблицы
+		List<Subjects> listSubjects = subjectsService.listAll();
+		model.addAttribute("listSubjects", listSubjects);
+
+		return "subjects";
+	}*/
 	
 	@RequestMapping("/new")
 	public String showNewProductPage(Model model) { //создание нового продукта
