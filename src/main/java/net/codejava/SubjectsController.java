@@ -26,14 +26,14 @@ public class SubjectsController {
         return "subjects";
     }
 
-    @RequestMapping("/sub/play/{id}")
-    public ModelAndView showPlayProductPage(@PathVariable(name = "id") int id) {
+    @RequestMapping("/sub/select/{id}")
+    public String showPlayProductPage(@PathVariable(name = "id") int id) {
         ModelAndView mav = new ModelAndView("playView");
         Subjects subject = subjectsService.get(id);
         mav.addObject("subject", subject);
         //mav.addObject("id",id);
 
-        return mav;
+        return "index";
         //return "playView";
     }
 }

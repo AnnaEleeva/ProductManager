@@ -22,7 +22,7 @@
         <tr th:each="subject : ${listSubjects}">
             <td th:text="${subject.name}">Name</td>
             <td>
-                <a th:href="@{'/sub/play/' + ${subject.id}}">Play!</a>
+                <a th:href="@{'/sub/select/' + ${subject.id}}">select!</a>
             </td>
 
 
