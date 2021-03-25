@@ -14,7 +14,6 @@
     <table border="1" cellpadding="10">
         <thead>
         <tr>
-            <th>Product ID</th>
             <th>Level</th>
             <th>Name</th>
             <th>Play</th>
@@ -22,11 +21,10 @@
         </thead>
         <tbody>
         <tr th:each="level : ${listLevels}">
-            <td th:text="${level.id}">Product ID</td>
             <td th:text="${level.level}">Level</td>
             <td th:text="${level.name}">Name</td>
             <td>
-                <a th:href="@{'/play/' + ${level.id}}">Play!</a>
+                <a th:href="@{'/ver/select/' + ${level.id}}">Play!</a>
             </td>
 
         </tr>
