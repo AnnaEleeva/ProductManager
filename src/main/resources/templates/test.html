@@ -1,28 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
+<div align="center">
 <form>
-    <p>Please select your preferred contact method:</p>
-    <li>
+    <p th:text="${deList[0]}"></p>
+    <div align="center">
         <input type="radio" id="contactChoice1"
                name="contact" value="email">
-        <label for="contactChoice1">Email</label> <br />
+        <label for="contactChoice1" th:text="${ruList[0]}"></label> <br />
 
         <input type="radio" id="contactChoice2"
                name="contact" value="phone">
-        <label for="contactChoice2">Phone</label> <br />
+        <label for="contactChoice2" th:text="${ruList[1]}" ></label> <br />
 
         <input type="radio" id="contactChoice3"
                name="contact" value="mail">
-        <label for="contactChoice3">Mail</label> <br />
-    </li>
+        <label for="contactChoice3" th:text="${ruList[2]}"></label> <br />
+    </div>
+    <br />
     <div>
         <button type="submit">Submit</button>
     </div>
 </form>
+</div>
 </body>
 </html>

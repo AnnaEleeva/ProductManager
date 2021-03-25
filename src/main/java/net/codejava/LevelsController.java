@@ -23,14 +23,15 @@ public class LevelsController {
     @Autowired
     private SubjectsService subjectsService;
 
-    @RequestMapping("/sub/select/{id}")
-    public ModelAndView viewLevelsPage(@PathVariable(name = "id") int id) { //вывод таблицы
+    @RequestMapping("/sub/select/{idSubject}")
+    public ModelAndView viewLevelsPage(@PathVariable(name = "idSubject") int idSubject) { //вывод таблицы
         ModelAndView mav = new ModelAndView("levels");
         List<Levels> listLevels = levelsService.listAll();
-        Subjects subject =subjectsService.get(id);
+        Subjects subject =subjectsService.get(idSubject);
 
         mav.addObject("listLevels", listLevels);
         mav.addObject("nameSubject",subject.getName());
+        mav.addObject("idSubject",subject.getId());
 
         return mav;
     }
