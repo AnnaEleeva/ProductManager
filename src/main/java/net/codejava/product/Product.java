@@ -1,4 +1,4 @@
-package net.codejava;
+package net.codejava.product;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -13,10 +13,10 @@ public class Product {
 	private String madein;
 	private float price;
 
-	protected Product() {
+	public Product() {
 	}
 
-	protected Product(Long id, String name, String brand, String madein, float price) {
+	public Product(Long id, String name, String brand, String madein, float price) {
 		super();
 		this.id = id;
 		this.name = name;
