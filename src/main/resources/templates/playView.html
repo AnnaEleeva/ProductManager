@@ -6,8 +6,24 @@
     <title>Hello!</title>
 </head>
 <body>
+<script>
+      let d = new Date();
+      document.body.innerHTML = "<h4>Today’s date is " + d + "</h4>"
+
+      function sayThanks() {alert('Спасибо!');}
+</script>
+
+<input type="button" onclick="alert('Клик!')" value="Кнопка">
+<input type="button" id="elem" onclick="alert('Было')" value="Нажми меня">
+<button onclick="alert(this.innerHTML)">Нажми меня</button>
+<script>
+  function sayThanks() { alert('Спасибо!');}
+  elem.onclick = sayThanks;
+</script>
+
 <div align="center">
     <h1>Hello!</h1>
+    <img th:src="*{id}" src="https://bipbap.ru/wp-content/uploads/2019/05/86ae0b2400c92d333751c8d9a9ae68e4.png" width="100" height="100"/>
     <br />
     <form  th:object="${product}">
 
@@ -15,7 +31,11 @@
             <tr>
                 <td>Product ID:</td>
                 <td>
-                    <input type="text" th:field="*{id}" readonly="readonly" />
+                    <!--<input type="text" th:field="*{id}" readonly="readonly" />-->
+                    <span th:utext="*{id}"></span>
+                    <input type="button"  id="elem2" onclick="alert('Было')" value="Push" >
+                    <script>
+                    function sayThanks() { alert("!!!");} elem2.onclick = sayThanks; </script>
                 </td>
             </tr>
 
