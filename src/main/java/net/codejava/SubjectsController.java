@@ -19,14 +19,14 @@ public class SubjectsController {
     private SubjectsService subjectsService;
 
     @RequestMapping("/sub")
-    public String viewHomePage(Model model) { //вывод таблицы
+    public String viewSubjectsPage(Model model) { //вывод таблицы
         List<Subjects> listSubjects = subjectsService.listAll();
         model.addAttribute("listSubjects", listSubjects);
 
         return "subjects";
     }
 
-    @RequestMapping("/sub/select/{id}")
+  /*  @RequestMapping("/sub/select/{id}")
     public String showPlayProductPage(@PathVariable(name = "id") int id) {
         ModelAndView mav = new ModelAndView("playView");
         Subjects subject = subjectsService.get(id);
@@ -35,5 +35,5 @@ public class SubjectsController {
 
         return "index";
         //return "playView";
-    }
+    }*/
 }
