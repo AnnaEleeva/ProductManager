@@ -12,6 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional
 public class ProductService {
 
+	//тут можно более интресные методы сделать..
 	@Autowired
 	private ProductRepository repo;
 	

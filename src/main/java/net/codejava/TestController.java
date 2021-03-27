@@ -3,8 +3,10 @@ package net.codejava;
 import net.codejava.levels.Levels;
 import net.codejava.subjects.Subjects;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.ArrayList;
@@ -27,5 +29,11 @@ public class TestController {
         mav.addObject("deList",en1);
 
         return mav;
+    }
+
+    @RequestMapping(value = "/getAnswer", method = RequestMethod.POST)
+    public String reSet(@ModelAttribute("answer") String str){
+        System.out.println(str);
+        return  "index";
     }
 }

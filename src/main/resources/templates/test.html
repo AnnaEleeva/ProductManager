@@ -7,7 +7,7 @@
 </head>
 <body>
 <div align="center">
-<form>
+<form action="#" th:action="@{/getAnswer}" th:object="${str}" method="post">
     <p th:text="${deList[0]}"></p>
     <div align="center">
         <input type="radio" id="contactChoice1"
