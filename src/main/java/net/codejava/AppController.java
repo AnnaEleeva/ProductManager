@@ -54,4 +54,11 @@ public class AppController {
 		service.delete(id);
 		return "redirect:/";		
 	}
+
+	@RequestMapping("/403")
+	public String error403() {
+		return "403";
+	}
+
+
 }

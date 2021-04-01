@@ -18,7 +18,9 @@
         </form>
     </div>
     <h1>Product List</h1>
-        <a href="/new">Create New Product</a>
+        <div sec:authorize="hasAnyAuthority('CREATOR', 'ADMIN')">
+             <a href="/new">Create New Product</a>
+        </div>
     <br/><br/>
     <table border="1" cellpadding="10">
         <thead>
@@ -28,7 +30,7 @@
                 <th>Brand</th>
                 <th>Made In</th>
                 <th>Price</th>
-                <th >Actions</th>
+                <th sec:authorize="hasAnyAuthority('ADMIN', 'EDITOR')">Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -38,10 +40,9 @@
                 <td th:text="${product.brand}">Brand</td>
                 <td th:text="${product.madein}">Made in</td>
                 <td th:text="${product.price}">Price</td>
-                <td >
+                <td sec:authorize="hasAnyAuthority('ADMIN', 'EDITOR')">
                 	<a th:href="@{'/edit/' + ${product.id}}">Edit</a>
-                	&nbsp;&nbsp;&nbsp;
-                	<a th:href="@{'/delete/' + ${product.id}}">Delete</a>
+                    <a sec:authorize="hasAuthority('ADMIN')" th:href="@{'/delete/' + ${product.id}}">Delete</a>
                 </td>
 
             </tr>
