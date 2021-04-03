@@ -17,6 +17,8 @@ import java.util.List;
 @Controller
 public class LevelsController {
 
+    public static int level;
+
     @Autowired
     private LevelsService levelsService;
 
@@ -25,6 +27,11 @@ public class LevelsController {
 
     @RequestMapping("/sub/select/{idSubject}")
     public ModelAndView viewLevelsPage(@PathVariable(name = "idSubject") int idSubject) { //вывод таблицы
+
+        SubjectsController.subjectEnum=SubjectEnum.values()[idSubject-1];
+        QuestMaker.fw();
+        System.out.println();
+
         ModelAndView mav = new ModelAndView("levels");
         List<Levels> listLevels = levelsService.listAll();
         Subjects subject =subjectsService.get(idSubject);

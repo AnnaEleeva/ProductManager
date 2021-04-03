@@ -42,6 +42,8 @@ public class VersionsController {
         mav.addObject("idSubject",subject.getId());
         mav.addObject("idLevel",level.getId()); //
 
+        LevelsController.level=idLevel-1;
+
         return mav;
     }
 }

@@ -15,6 +15,8 @@ import java.util.List;
 @Controller
 public class SubjectsController {
 
+    public static SubjectEnum subjectEnum;
+
     @Autowired
     private SubjectsService subjectsService;
 
