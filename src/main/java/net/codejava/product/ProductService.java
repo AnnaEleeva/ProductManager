@@ -1,7 +1,9 @@
-package net.codejava;
+package net.codejava.product;
 
 import java.util.List;
 
+import net.codejava.product.Product;
+import net.codejava.product.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

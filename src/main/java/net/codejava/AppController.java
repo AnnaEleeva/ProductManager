@@ -2,6 +2,8 @@ package net.codejava;
 
 import java.util.List;
 
+import net.codejava.product.Product;
+import net.codejava.product.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,7 +17,7 @@ import org.springframework.web.servlet.ModelAndView;
 public class AppController {
 
 	@Autowired
-	private ProductService service; 
+	private ProductService service;
 	
 	@RequestMapping("/")
 	public String viewHomePage(Model model) { //вывод таблицы
