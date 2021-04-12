@@ -1,5 +1,6 @@
-package net.codejava;
+package net.codejava.controller;
 
+import net.codejava.SubjectEnum;
 import net.codejava.product.Product;
 import net.codejava.subjects.Subjects;
 import net.codejava.subjects.SubjectsService;

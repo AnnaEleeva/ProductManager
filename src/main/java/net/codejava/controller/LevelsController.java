@@ -1,13 +1,13 @@
-package net.codejava;
+package net.codejava.controller;
 
+import net.codejava.SubjectEnum;
 import net.codejava.levels.Levels;
 import net.codejava.levels.LevelsService;
-import net.codejava.product.Product;
+import net.codejava.quest.QuestMaker;
 import net.codejava.subjects.Subjects;
 import net.codejava.subjects.SubjectsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -28,7 +28,7 @@ public class LevelsController {
     @RequestMapping("/sub/select/{idSubject}")
     public ModelAndView viewLevelsPage(@PathVariable(name = "idSubject") int idSubject) { //вывод таблицы
 
-        SubjectsController.subjectEnum=SubjectEnum.values()[idSubject-1];
+        SubjectsController.subjectEnum= SubjectEnum.values()[idSubject-1];
         QuestMaker.fw();
         System.out.println();
 

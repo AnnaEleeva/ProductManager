@@ -1,5 +1,6 @@
-package net.codejava;
+package net.codejava.controller;
 
+import net.codejava.controller.LevelsController;
 import net.codejava.levels.Levels;
 import net.codejava.levels.LevelsService;
 import net.codejava.subjects.Subjects;
@@ -8,7 +9,6 @@ import net.codejava.versions.Versions;
 import net.codejava.versions.VersionsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;

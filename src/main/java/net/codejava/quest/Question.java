@@ -1,7 +1,6 @@
 package net.codejava.quest;
 
 public class Question {
-
     private String question;
     private String[] answers;
     private String key;

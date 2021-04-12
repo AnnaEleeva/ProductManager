@@ -1,12 +1,11 @@
-package net.codejava;
+package net.codejava.controller;
 
-import net.codejava.levels.Levels;
-import net.codejava.subjects.Subjects;
+import net.codejava.controller.LevelsController;
+import net.codejava.quest.QuestMaker;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -57,7 +56,7 @@ public class TestController {
           //  questionText.setText(QuestMaker.questions.get(idLevel).get(nowQuestion).getQuestion());
            // System.out.println("LEVEL "+idLevel);
           //  System.out.println("lEv "+ LevelsController.level);
-            String[] answers =QuestMaker.questions.get(LevelsController.level).get(nowQuestion).getAnswers();
+            String[] answers = QuestMaker.questions.get(LevelsController.level).get(nowQuestion).getAnswers();
              stringList = Arrays.asList(answers);
             Collections.shuffle(stringList);
 

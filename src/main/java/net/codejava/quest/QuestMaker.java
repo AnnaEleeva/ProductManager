@@ -1,5 +1,7 @@
-package net.codejava;
+package net.codejava.quest;
 
+
+import net.codejava.controller.SubjectsController;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -41,7 +43,7 @@ public class QuestMaker {
 
             try {
               //  File file2 = new File("C:\\Users\\Anna\\IdeaProjects\\gameJavaFX1(2)\\src\\txtFiles\\" + SubjectsController.subjectEnum.getTitle() + "\\" + level + SubjectsController.subjectEnum.getTitle() + ".txt");
-                File file2 = new File ("C:\\Users\\Anna\\IdeaProjects\\ProductManager\\src\\main\\resources\\txtFiles\\tests\\"+SubjectsController.subjectEnum.getTitle()+"\\"+level+SubjectsController.subjectEnum.getTitle()+".txt");
+                File file2 = new File ("C:\\Users\\Anna\\IdeaProjects\\ProductManager\\src\\main\\resources\\txtFiles\\tests\\"+ SubjectsController.subjectEnum.getTitle()+"\\"+level+SubjectsController.subjectEnum.getTitle()+".txt");
                 FileReader fr2 = new FileReader(file2);
                 BufferedReader reader2 = new BufferedReader(fr2);
                 String line2 = reader2.readLine();
